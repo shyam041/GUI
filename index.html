@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            var name='sammmmmmmmmmmmmm';
+            var sec='20';
+            var third=20;
+            /*function substitute()
+            {
+                var myValue=document.getElementById('myTextBox').value;
+                if(myValue.length==0)
+                {
+                    alert("enter something");
+                    return;
+                }
+                var tit=document.getElementById('title');
+                tit.innerHTML=sec-third;
+            }*/
+            var varFunc=function(a,b)
+            {
+                return(a+b);
+            }
+            
+            //alert(varFunc(2,3));
+            //anunymous function
+            /*var myRes=(function()
+            {
+               return arguments[0]+arguments[1] ;
+            })(5,6);
+            alert(myRes);*/
+            var dt=new Date('Feb 21,2016');
+            var arr=["sam","shyam","vin",dt];
+            for(i in arr)
+            {
+                //alert(arr[i]);
+            }
+            /*alert((function()
+            {
+               return arguments[0]+arguments[1] ;
+            })(5,6));*/
+            // associative arrays  
+            
+            var assarr=[];
+            assarr["name"]="sam";
+            //alert(assarr["name"]);
+            myScope="The global scope";
+            //calling anonymous function without arguments
+            (function()
+            {
+                var myScope="The function scope";
+                //alert("Inside the function = "+myScope);
+            })();
+            //alert("outside the function = "+myScope);
+            
+            
+            
+            //javascript object with object literal
+            
+            //var person={firstName:"sam",lastName:"patil"};
+            //alert("first name is : "+person.firstName+ " Last name is : "+person.lastName);
+            
+            
+            //Using an Object Constructor
+            function person(fn,ln)
+            {
+                this.firstName=fn;
+                this.lastName=ln;
+                //this.fullName=function(){alert("fffirst name is : "+this.firstName+ " Last name is : "+this.lastName);};
+            }
+            var sam=new person("sam","patil");
+            sam.degree="BE";
+            sam.fullName=function(){return("First name is : "+sam.firstName+ " Last name is : "+sam.lastName);};
+            //alert(sam.degree);
+            alert(sam.fullName());
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1 id="title">initial text</h1>
+            <input type="text" id="myTextBox" />
+            <input type="submit" value="click" onclick="substitute()" />
+        </div>
+    </body>
+</html>

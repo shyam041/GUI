@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function person(fn,ln)
+            {
+                this.firstName=fn;
+                this.lastName=ln;
+            }
+            person.prototype.nationality='Indian';
+            var shyam=new person("shyam","Deshpande");
+            alert(shyam.nationality);
+            person.prototype.fullname=function(){return (this.firstName+" "+this.lastName);};
+            alert(shyam.fullname());
+        </script>
+    </head>
+    <body>
+        <div>Prototype Example</div>
+    </body>
+</html>
